@@ -13,6 +13,14 @@
                     No type
                 @endif
             </h3>
+            @if ($project->technologies->isNotEmpty())
+                <div class="mt-4 d-flex justify-content-center align-items-center">
+                    <h3>Technology:</h3>
+                    @foreach ($project->technologies as $technology)
+                        <span class="badge bg-secondary m-3">{{ $technology->name }}</span>
+                    @endforeach
+                </div>
+            @endif
             @if ($project->cover_image)
                 <img class="w-25" src="{{ asset("storage/$project->cover_image") }}" alt="{{ $project->name }}">
             @endif
