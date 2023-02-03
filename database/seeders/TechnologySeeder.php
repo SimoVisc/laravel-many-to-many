@@ -17,7 +17,7 @@ class TechnologySeeder extends Seeder
      */
     public function run()
     {
-        // cancello tutti i dati della tabella type
+        // cancello tutti i dati della tabella Technology
         Schema::disableForeignKeyConstraints();
         Technology::truncate();
         Schema::enableForeignKeyConstraints();
